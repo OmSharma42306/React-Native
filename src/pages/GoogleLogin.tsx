@@ -13,15 +13,15 @@ const GoogleLogin = () =>{
             console.log("Email:", user.email); // User's email
             console.log("Photo URL:", user.photoURL); // User's profile picture
             const token = await user.getIdToken();
-            console.log("Google Tojen",token)
+             // console.log("Google Tojen",token)
             // send the token to your backend for verification
             const responce : any = await axios.post(`${GOOGLELOGIN_URL}`,{
                 token
             });
-            console.log(responce)
+            //console.log(responce)
             if(responce.data.message === "Authenticated"){
                 console.log("user authenticated!")
-                console.log(responce)
+                //console.log(responce)
                 localStorage.setItem("token",token)
                 alert("Login Successful!");
                 navigate("/dashboard")
