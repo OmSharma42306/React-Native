@@ -29,7 +29,7 @@ export default function AllPosts() {
 
     async function getAllPosts() {
         const token = localStorage.getItem("token")
-        const response = await axios.get(`${getAllPostsUrl}`,{
+        const response = await axios.get(`${getAllPostsUrl}/getAllPost`,{
             headers:{
                 Authorization:`Bearer ${token}`
             }
