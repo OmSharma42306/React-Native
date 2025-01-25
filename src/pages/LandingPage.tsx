@@ -91,7 +91,7 @@ export default function LandingPage() {
             </div>
             <div className="p-4">
               <h3 className="font-semibold text-gray-800">Authentication</h3>
-              <p className="text-gray-600">JWT</p>
+              <p className="text-gray-600">JWT & GoogleOAuth</p>
             </div>
           </div>
         </div>
