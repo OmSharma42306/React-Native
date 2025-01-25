@@ -46,12 +46,20 @@ export default function AllPosts() {
                 {/* Header with Create Post button */}
                 <div className="flex justify-between items-center mb-8">
                     <h1 className="text-3xl font-bold text-gray-800">Feed</h1>
-                    <Link 
-                        to="/post"
-                        className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors"
-                    >
-                        Create Post
-                    </Link>
+                    <div className="flex space-x-4">
+                        <Link 
+                            to="/post"
+                            className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors"
+                        >
+                            Create Post
+                        </Link>
+                        <Link 
+                            to="/dashboard"
+                            className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors"
+                        >
+                            Back
+                        </Link>
+                    </div>
                 </div>
 
                 {/* Posts Grid */}
