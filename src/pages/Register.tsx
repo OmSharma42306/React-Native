@@ -16,7 +16,7 @@ export default function Register() {
     setLoading(true);
 
     try {
-      const response = await handleRegister(name, email, password);
+      await handleRegister(name, email, password);
       // You might want to redirect here using react-router
       window.location.href = "/login"; // Or use navigation from react-router
     } catch (err: any) {
