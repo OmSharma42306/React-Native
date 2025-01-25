@@ -14,7 +14,7 @@ export default function LandingPage() {
             <h1 className="text-2xl font-bold text-gray-800">Affworld Technologies</h1>
             <div className="flex space-x-4">
               <a 
-                href="https://github.com/yourusername" 
+                href="https://github.com/OmSharma42306" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-blue-600 transition-colors"
@@ -22,7 +22,7 @@ export default function LandingPage() {
                 GitHub
               </a>
               <a 
-                href="https://linkedin.com/in/yourusername" 
+                href="https://www.linkedin.com/in/om-sharma-846733273" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-blue-600 transition-colors"
@@ -30,7 +30,7 @@ export default function LandingPage() {
                 LinkedIn
               </a>
               <a 
-                href="https://yourportfolio.com" 
+                href="https://astro-landing-silk.vercel.app/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-blue-600 transition-colors"
