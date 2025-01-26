@@ -9,9 +9,9 @@ const GoogleLogin = () =>{
         try{
             const result = await signInWithPopup(auth,googleProvider);
             const user = result.user;
-            console.log("Name:", user.displayName); // User's name
-            console.log("Email:", user.email); // User's email
-            console.log("Photo URL:", user.photoURL); // User's profile picture
+            // console.log("Name:", user.displayName); // User's name
+            // console.log("Email:", user.email); // User's email
+            // console.log("Photo URL:", user.photoURL); // User's profile picture
             const token = await user.getIdToken();
              // console.log("Google Tojen",token)
             // send the token to your backend for verification
