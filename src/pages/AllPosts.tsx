@@ -34,9 +34,9 @@ export default function AllPosts() {
                 Authorization:`Bearer ${token}`
             }
         });
-        console.log("URL: ", getAllPostsUrl);
+       // console.log("URL: ", getAllPostsUrl);
         const data = await response.data;
-        console.log("Posts Response", data);
+        //console.log("Posts Response", data);
         setPosts(data.posts);
     }
 
