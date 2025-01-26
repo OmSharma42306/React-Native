@@ -1,19 +1,19 @@
 import axios from 'axios';
 
 const API_URL = import.meta.env.VITE_API_URL;
-console.log(API_URL);
+//console.log(API_URL);
 
 // sending request to backend to get all the tasks
 export const getTasks = async () => {
   const token = localStorage.getItem("token")
-  console.log("Token",token)
+  //console.log("Token",token)
   const response = await axios.get(`${API_URL}/tasks`,{
     headers:{
       Authorization : `Bearer ${token}`
     }
   });
-  console.log("Token",token)
-  console.log(response)
+  //console.log("Token",token)
+  //console.log(response)
   return response.data;
 };
 
