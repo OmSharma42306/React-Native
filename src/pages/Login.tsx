@@ -18,7 +18,7 @@ export default function Login() {
 
     try {
       const response = await handleLogin(email, password);
-      console.log("Response from login", response);
+      //console.log("Response from login", response);
       localStorage.setItem("token",response.token)
       navigate("/dashboard");
     } catch (err: any) {
