@@ -15,7 +15,7 @@ const Post  = () => {
       if (!token) return null;
       try {
         const decoded: any = jwtDecode(token); // Decode the JWT
-        console.log("Decoded Google Token",decoded)
+       // console.log("Decoded Google Token",decoded)
         return decoded;
         //return decoded.name; // Adjust based on the backend token structure
       } catch (error) {
@@ -59,7 +59,8 @@ const Post  = () => {
       const formData = new FormData();
       formData.append("photo", photo);
       formData.append("caption", caption);
-      formData.append("googleUserId", googleUserId); // issue
+      formData.append("googleUserId", googleUserId); // issue-solved
+      
       try {
         setLoading(true);
         setMessage("");
