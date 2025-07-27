@@ -11,12 +11,17 @@ export default function Login(){
     const { login } = useAuth();
     console.log("LOGIN MESSAGE : ",loginMessage)
 
+    const handleLogin = async () =>{
+        const token = 'dummy-token';
+        // @ts-ignore
+        await login(token)
+    }
     return (
 
         <View style={styles.container}>
             <TextInput style={styles.input} placeholder="Enter Email" onChangeText={(text)=>setEmail(text)}></TextInput>
             <TextInput style={styles.input} placeholder="Enter Password" onChangeText={(text)=>setPassword(text)}></TextInput>
-            <Button title="Login" onPress={()=>login({name : "Om Sharma"})}></Button>
+            <Button title="Login" onPress={handleLogin}></Button>
             {loginMessage ? <Text style={styles.text}>Om Sharma </Text> : ""}
         </View>
     )
