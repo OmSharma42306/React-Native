@@ -13,7 +13,8 @@ export default function ToDo(){
         const updatedTodos = todos.filter((todo:any)=> todo !== deleteTodo);
         setTodos(updatedTodos);
     }
-    return <View style={styles.container}>
+    return(
+         <View style={styles.container}>
         <TextInput placeholder="Enter Todo" onChangeText={(text)=>{setTodo(text)}} style={styles.input}></TextInput>
         <TouchableOpacity style={styles.button} onPress={addTodo}>
             <Text style={styles.buttonText}>Add Todo</Text>
@@ -33,5 +34,5 @@ export default function ToDo(){
         </>
         : ""}
         
-    </View>
+    </View>)
 }

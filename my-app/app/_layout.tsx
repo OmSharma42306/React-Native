@@ -3,10 +3,12 @@ import { useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import 'react-native-reanimated';
+import { View } from 'react-native';
+
 
 import { useColorScheme } from '@/hooks/useColorScheme';
 import { AuthProvider } from '@/context/AuthContext';
-
+import Toast from 'react-native-toast-message';
 export default function RootLayout() {
   const colorScheme = useColorScheme();
   const [loaded] = useFonts({
@@ -21,6 +23,8 @@ export default function RootLayout() {
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <AuthProvider>
+        
+          <View style={{ flex: 1 }}>
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="+not-found" />
@@ -28,6 +32,8 @@ export default function RootLayout() {
       </Stack>
       
       <StatusBar style="auto" />
+      <Toast/>
+       </View>
       </AuthProvider>
     </ThemeProvider>
   );
