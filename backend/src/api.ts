@@ -10,7 +10,7 @@ router.post('/register',async(req:Request,res:Response)=>{
     try{
 
         const existingUser = await userModel.findOne({email : email});
-        
+
         if(existingUser){
             res.status(409).json({msg: "User Already Exists!"});
             return;
@@ -22,7 +22,7 @@ router.post('/register',async(req:Request,res:Response)=>{
             password : password
         });
         await newUser.save();
-        res.status(200).json({msg : "User Created Successfully",userID : newUser.id});
+        res.status(200).json({msg : "User Created Successfully",userID : newUser.id,name : newUser.name});
         return;
 
     }catch(error){
@@ -46,7 +46,7 @@ router.post('/login',async(req:Request,res:Response)=>{
         
         const token = jwt.sign({userId : existingUser.id},jwtSecretKey as string);
         console.log("Token",token);
-        res.status(200).json({token : token});
+        res.status(200).json({token : token,userId:existingUser.id});
         return;
 
     }catch(error){

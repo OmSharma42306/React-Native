@@ -7,8 +7,7 @@ const MONGODB_URL : any  = process.env.MONGODB_URI || undefined;
 
 // connection stuff
 export async function connectDB(){
-    const response = await mongoose.connect(MONGODB_URL);
-    console.log(response);
+    await mongoose.connect(MONGODB_URL); 
 }
 
 const userSchema = new mongoose.Schema({
